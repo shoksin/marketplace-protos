@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package auth;
+package pbauth;
 
 option go_package = "github.com/shoksin/marketplace-protos/proto/auth;pbauth";
 
