@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: proto/order/order.proto
 
-package order
+package pborder
 
 import (
 	context "context"

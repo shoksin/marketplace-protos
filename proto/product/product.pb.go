@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: proto/product/product.proto
 
-package product
+package pbproduct
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -534,7 +534,7 @@ const file_proto_product_product_proto_rawDesc = "" +
 	"\rCreateProduct\x12\x1d.product.CreateProductRequest\x1a\x1e.product.CreateProductResponse\x12<\n" +
 	"\aFindOne\x12\x17.product.FindOneRequest\x1a\x18.product.FindOneResponse\x12<\n" +
 	"\aFindAll\x12\x17.product.FindAllRequest\x1a\x18.product.FindAllResponse\x12N\n" +
-	"\rDecreaseStock\x12\x1d.product.DecreaseStockRequest\x1a\x1e.product.DecreaseStockResponseB5Z3github.com/shoksin/marketplace-protos/proto/productb\x06proto3"
+	"\rDecreaseStock\x12\x1d.product.DecreaseStockRequest\x1a\x1e.product.DecreaseStockResponseB?Z=github.com/shoksin/marketplace-protos/proto/product;pbproductb\x06proto3"
 
 var (
 	file_proto_product_product_proto_rawDescOnce sync.Once

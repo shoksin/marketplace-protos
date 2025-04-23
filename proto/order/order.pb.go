@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: proto/order/order.proto
 
-package order
+package pborder
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -155,7 +155,7 @@ const file_proto_order_order_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x12\x0e\n" +
 	"\x02id\x18\x03 \x01(\x03R\x02id2T\n" +
 	"\fOrderService\x12D\n" +
-	"\vCreateOrder\x12\x19.order.CreateOrderRequest\x1a\x1a.order.CreateOrderResponseB3Z1github.com/shoksin/marketplace-protos/proto/orderb\x06proto3"
+	"\vCreateOrder\x12\x19.order.CreateOrderRequest\x1a\x1a.order.CreateOrderResponseB;Z9github.com/shoksin/marketplace-protos/proto/order;pborderb\x06proto3"
 
 var (
 	file_proto_order_order_proto_rawDescOnce sync.Once

@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: proto/auth/auth.proto
 
-package auth
+package pbauth
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -554,7 +554,7 @@ const file_proto_auth_auth_proto_rawDesc = "" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x12:\n" +
 	"\n" +
 	"AdminLogin\x12\x17.auth.AdminLoginRequest\x1a\x13.auth.LoginResponse\x129\n" +
-	"\bValidate\x12\x15.auth.ValidateRequest\x1a\x16.auth.ValidateResponseB2Z0github.com/shoksin/marketplace-protos/proto/authb\x06proto3"
+	"\bValidate\x12\x15.auth.ValidateRequest\x1a\x16.auth.ValidateResponseB9Z7github.com/shoksin/marketplace-protos/proto/auth;pbauthb\x06proto3"
 
 var (
 	file_proto_auth_auth_proto_rawDescOnce sync.Once
