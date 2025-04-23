@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package product;
+package pbproduct;
 
-option go_package = "github.com/shoksin/marketplace-protos/proto/product;pbproduct";
+option go_package = "github.com/shoksin/marketplace-protos/proto;pbproduct";
 
 service ProductService{
     rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse);

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pbauth;
 
-option go_package = "github.com/shoksin/marketplace-protos/proto/auth;pbauth";
+option go_package = "github.com/shoksin/marketplace-protos/proto;pbauth";
 
 service AuthService {
   rpc Register(RegisterRequest) returns (RegisterResponse);

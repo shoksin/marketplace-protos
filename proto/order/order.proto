@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package order;
+package pborder;
 
-option go_package = "github.com/shoksin/marketplace-protos/proto/order;pborder";
+option go_package = "github.com/shoksin/marketplace-protos/proto;pborder";
 
 service OrderService {
     rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
