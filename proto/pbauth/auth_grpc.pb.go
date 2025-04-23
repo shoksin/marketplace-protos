@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v3.21.12
-// source: proto/auth/auth.proto
+// source: proto/pbauth/auth.proto
 
 package pbauth
 
@@ -19,11 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	AuthService_Register_FullMethodName      = "/auth.AuthService/Register"
-	AuthService_AdminRegister_FullMethodName = "/auth.AuthService/AdminRegister"
-	AuthService_Login_FullMethodName         = "/auth.AuthService/Login"
-	AuthService_AdminLogin_FullMethodName    = "/auth.AuthService/AdminLogin"
-	AuthService_Validate_FullMethodName      = "/auth.AuthService/Validate"
+	AuthService_Register_FullMethodName      = "/pbauth.AuthService/Register"
+	AuthService_AdminRegister_FullMethodName = "/pbauth.AuthService/AdminRegister"
+	AuthService_Login_FullMethodName         = "/pbauth.AuthService/Login"
+	AuthService_AdminLogin_FullMethodName    = "/pbauth.AuthService/AdminLogin"
+	AuthService_Validate_FullMethodName      = "/pbauth.AuthService/Validate"
 )
 
 // AuthServiceClient is the client API for AuthService service.
@@ -244,7 +244,7 @@ func _AuthService_Validate_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AuthService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "auth.AuthService",
+	ServiceName: "pbauth.AuthService",
 	HandlerType: (*AuthServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -269,5 +269,5 @@ var AuthService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/auth/auth.proto",
+	Metadata: "proto/pbauth/auth.proto",
 }
