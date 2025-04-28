@@ -18,7 +18,9 @@ message CreateProductRequest {
 }
 
 message CreateProductResponse {
-
+    int64 status = 1;
+    string error = 2;
+    int64 id = 3;
 }
 
 message FindOneData {

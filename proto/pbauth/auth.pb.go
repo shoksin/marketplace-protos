@@ -554,7 +554,7 @@ const file_proto_pbauth_auth_proto_rawDesc = "" +
 	"\x05Login\x12\x14.pbauth.LoginRequest\x1a\x15.pbauth.LoginResponse\x12>\n" +
 	"\n" +
 	"AdminLogin\x12\x19.pbauth.AdminLoginRequest\x1a\x15.pbauth.LoginResponse\x12=\n" +
-	"\bValidate\x12\x17.pbauth.ValidateRequest\x1a\x18.pbauth.ValidateResponseB4Z2github.com/shoksin/marketplace-protos/proto;pbauthb\x06proto3"
+	"\bValidate\x12\x17.pbauth.ValidateRequest\x1a\x18.pbauth.ValidateResponseB;Z9github.com/shoksin/marketplace-protos/proto/pbauth;pbauthb\x06proto3"
 
 var (
 	file_proto_pbauth_auth_proto_rawDescOnce sync.Once

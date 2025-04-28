@@ -83,6 +83,9 @@ func (x *CreateProductRequest) GetStock() int64 {
 
 type CreateProductResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	Status        int64                  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
+	Error         string                 `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	Id            int64                  `protobuf:"varint,3,opt,name=id,proto3" json:"id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -115,6 +118,27 @@ func (x *CreateProductResponse) ProtoReflect() protoreflect.Message {
 // Deprecated: Use CreateProductResponse.ProtoReflect.Descriptor instead.
 func (*CreateProductResponse) Descriptor() ([]byte, []int) {
 	return file_proto_pbproduct_product_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *CreateProductResponse) GetStatus() int64 {
+	if x != nil {
+		return x.Status
+	}
+	return 0
+}
+
+func (x *CreateProductResponse) GetError() string {
+	if x != nil {
+		return x.Error
+	}
+	return ""
+}
+
+func (x *CreateProductResponse) GetId() int64 {
+	if x != nil {
+		return x.Id
+	}
+	return 0
 }
 
 type FindOneData struct {
@@ -505,8 +529,11 @@ const file_proto_pbproduct_product_proto_rawDesc = "" +
 	"\x14CreateProductRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n" +
 	"\x05price\x18\x02 \x01(\x03R\x05price\x12\x14\n" +
-	"\x05stock\x18\x03 \x01(\x03R\x05stock\"\x17\n" +
-	"\x15CreateProductResponse\"]\n" +
+	"\x05stock\x18\x03 \x01(\x03R\x05stock\"U\n" +
+	"\x15CreateProductResponse\x12\x16\n" +
+	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
+	"\x05error\x18\x02 \x01(\tR\x05error\x12\x0e\n" +
+	"\x02id\x18\x03 \x01(\x03R\x02id\"]\n" +
 	"\vFindOneData\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
