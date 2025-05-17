@@ -16,6 +16,7 @@ message RegisterRequest {
   string username = 1;
   string email = 2;
   string password = 3;
+  string birthday = 4; // "YYYY-MM-DD"
 }
 
 message RegisterResponse {
@@ -25,11 +26,6 @@ message RegisterResponse {
 }
 
 message AdminRegisterRequest {
-  string username = 1;
-  string password = 2;
-}
-
-message AdminRegisterResponse {
   string username = 1;
   string password = 2;
 }
