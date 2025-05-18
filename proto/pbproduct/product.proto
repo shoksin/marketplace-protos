@@ -13,7 +13,7 @@ service ProductService{
 
 message CreateProductRequest {
     string name = 1;
-    int64 price = 2;
+    double price = 2;
     int64 stock = 3;
 }
 
@@ -26,7 +26,7 @@ message CreateProductResponse {
 message FindOneData {
     int64 id = 1;
     string name = 2;
-    int64 price = 3;
+    double price = 3;
     int64 stock = 4;
 }
 
