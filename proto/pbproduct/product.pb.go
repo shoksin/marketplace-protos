@@ -24,7 +24,7 @@ const (
 type CreateProductRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Price         int64                  `protobuf:"varint,2,opt,name=price,proto3" json:"price,omitempty"`
+	Price         float64                `protobuf:"fixed64,2,opt,name=price,proto3" json:"price,omitempty"`
 	Stock         int64                  `protobuf:"varint,3,opt,name=stock,proto3" json:"stock,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -67,7 +67,7 @@ func (x *CreateProductRequest) GetName() string {
 	return ""
 }
 
-func (x *CreateProductRequest) GetPrice() int64 {
+func (x *CreateProductRequest) GetPrice() float64 {
 	if x != nil {
 		return x.Price
 	}
@@ -145,7 +145,7 @@ type FindOneData struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Price         int64                  `protobuf:"varint,3,opt,name=price,proto3" json:"price,omitempty"`
+	Price         float64                `protobuf:"fixed64,3,opt,name=price,proto3" json:"price,omitempty"`
 	Stock         int64                  `protobuf:"varint,4,opt,name=stock,proto3" json:"stock,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -195,7 +195,7 @@ func (x *FindOneData) GetName() string {
 	return ""
 }
 
-func (x *FindOneData) GetPrice() int64 {
+func (x *FindOneData) GetPrice() float64 {
 	if x != nil {
 		return x.Price
 	}
@@ -528,7 +528,7 @@ const file_proto_pbproduct_product_proto_rawDesc = "" +
 	"\x1dproto/pbproduct/product.proto\x12\tpbproduct\"V\n" +
 	"\x14CreateProductRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n" +
-	"\x05price\x18\x02 \x01(\x03R\x05price\x12\x14\n" +
+	"\x05price\x18\x02 \x01(\x01R\x05price\x12\x14\n" +
 	"\x05stock\x18\x03 \x01(\x03R\x05stock\"U\n" +
 	"\x15CreateProductResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
@@ -537,7 +537,7 @@ const file_proto_pbproduct_product_proto_rawDesc = "" +
 	"\vFindOneData\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
-	"\x05price\x18\x03 \x01(\x03R\x05price\x12\x14\n" +
+	"\x05price\x18\x03 \x01(\x01R\x05price\x12\x14\n" +
 	"\x05stock\x18\x04 \x01(\x03R\x05stock\" \n" +
 	"\x0eFindOneRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\"k\n" +
