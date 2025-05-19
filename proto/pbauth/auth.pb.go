@@ -91,7 +91,7 @@ func (x *RegisterRequest) GetBirthday() string {
 
 type RegisterResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Status        int64                  `protobuf:"varint,2,opt,name=status,proto3" json:"status,omitempty"`
 	Error         string                 `protobuf:"bytes,3,opt,name=error,proto3" json:"error,omitempty"`
 	unknownFields protoimpl.UnknownFields
@@ -128,11 +128,11 @@ func (*RegisterResponse) Descriptor() ([]byte, []int) {
 	return file_proto_pbauth_auth_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *RegisterResponse) GetId() int64 {
+func (x *RegisterResponse) GetId() string {
 	if x != nil {
 		return x.Id
 	}
-	return 0
+	return ""
 }
 
 func (x *RegisterResponse) GetStatus() int64 {
@@ -413,7 +413,7 @@ type ValidateResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        int64                  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
 	Error         string                 `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	UserID        int64                  `protobuf:"varint,3,opt,name=userID,proto3" json:"userID,omitempty"`
+	UserID        string                 `protobuf:"bytes,3,opt,name=userID,proto3" json:"userID,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -462,11 +462,11 @@ func (x *ValidateResponse) GetError() string {
 	return ""
 }
 
-func (x *ValidateResponse) GetUserID() int64 {
+func (x *ValidateResponse) GetUserID() string {
 	if x != nil {
 		return x.UserID
 	}
-	return 0
+	return ""
 }
 
 var File_proto_pbauth_auth_proto protoreflect.FileDescriptor
@@ -480,7 +480,7 @@ const file_proto_pbauth_auth_proto_rawDesc = "" +
 	"\bpassword\x18\x03 \x01(\tR\bpassword\x12\x1a\n" +
 	"\bbirthday\x18\x04 \x01(\tR\bbirthday\"P\n" +
 	"\x10RegisterResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x16\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n" +
 	"\x06status\x18\x02 \x01(\x03R\x06status\x12\x14\n" +
 	"\x05error\x18\x03 \x01(\tR\x05error\"N\n" +
 	"\x14AdminRegisterRequest\x12\x1a\n" +
@@ -501,7 +501,7 @@ const file_proto_pbauth_auth_proto_rawDesc = "" +
 	"\x10ValidateResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x12\x16\n" +
-	"\x06userID\x18\x03 \x01(\x03R\x06userID2\xca\x02\n" +
+	"\x06userID\x18\x03 \x01(\tR\x06userID2\xca\x02\n" +
 	"\vAuthService\x12=\n" +
 	"\bRegister\x12\x17.pbauth.RegisterRequest\x1a\x18.pbauth.RegisterResponse\x12G\n" +
 	"\rAdminRegister\x12\x1c.pbauth.AdminRegisterRequest\x1a\x18.pbauth.RegisterResponse\x124\n" +

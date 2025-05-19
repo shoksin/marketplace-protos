@@ -85,7 +85,7 @@ type CreateProductResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        int64                  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
 	Error         string                 `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	Id            int64                  `protobuf:"varint,3,opt,name=id,proto3" json:"id,omitempty"`
+	Id            string                 `protobuf:"bytes,3,opt,name=id,proto3" json:"id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -134,16 +134,16 @@ func (x *CreateProductResponse) GetError() string {
 	return ""
 }
 
-func (x *CreateProductResponse) GetId() int64 {
+func (x *CreateProductResponse) GetId() string {
 	if x != nil {
 		return x.Id
 	}
-	return 0
+	return ""
 }
 
 type FindOneData struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	Price         float64                `protobuf:"fixed64,3,opt,name=price,proto3" json:"price,omitempty"`
 	Stock         int64                  `protobuf:"varint,4,opt,name=stock,proto3" json:"stock,omitempty"`
@@ -181,11 +181,11 @@ func (*FindOneData) Descriptor() ([]byte, []int) {
 	return file_proto_pbproduct_product_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *FindOneData) GetId() int64 {
+func (x *FindOneData) GetId() string {
 	if x != nil {
 		return x.Id
 	}
-	return 0
+	return ""
 }
 
 func (x *FindOneData) GetName() string {
@@ -211,7 +211,7 @@ func (x *FindOneData) GetStock() int64 {
 
 type FindOneRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -246,11 +246,11 @@ func (*FindOneRequest) Descriptor() ([]byte, []int) {
 	return file_proto_pbproduct_product_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *FindOneRequest) GetId() int64 {
+func (x *FindOneRequest) GetId() string {
 	if x != nil {
 		return x.Id
 	}
-	return 0
+	return ""
 }
 
 type FindOneResponse struct {
@@ -411,8 +411,8 @@ func (x *FindAllResponse) GetProducts() []*FindOneData {
 
 type DecreaseStockRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	OrderID       int64                  `protobuf:"varint,2,opt,name=orderID,proto3" json:"orderID,omitempty"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	OrderID       string                 `protobuf:"bytes,2,opt,name=orderID,proto3" json:"orderID,omitempty"`
 	Quantity      int64                  `protobuf:"varint,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -448,18 +448,18 @@ func (*DecreaseStockRequest) Descriptor() ([]byte, []int) {
 	return file_proto_pbproduct_product_proto_rawDescGZIP(), []int{7}
 }
 
-func (x *DecreaseStockRequest) GetId() int64 {
+func (x *DecreaseStockRequest) GetId() string {
 	if x != nil {
 		return x.Id
 	}
-	return 0
+	return ""
 }
 
-func (x *DecreaseStockRequest) GetOrderID() int64 {
+func (x *DecreaseStockRequest) GetOrderID() string {
 	if x != nil {
 		return x.OrderID
 	}
-	return 0
+	return ""
 }
 
 func (x *DecreaseStockRequest) GetQuantity() int64 {
@@ -533,14 +533,14 @@ const file_proto_pbproduct_product_proto_rawDesc = "" +
 	"\x15CreateProductResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x12\x0e\n" +
-	"\x02id\x18\x03 \x01(\x03R\x02id\"]\n" +
+	"\x02id\x18\x03 \x01(\tR\x02id\"]\n" +
 	"\vFindOneData\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
 	"\x05price\x18\x03 \x01(\x01R\x05price\x12\x14\n" +
 	"\x05stock\x18\x04 \x01(\x03R\x05stock\" \n" +
 	"\x0eFindOneRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\"k\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\"k\n" +
 	"\x0fFindOneResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x12*\n" +
@@ -551,8 +551,8 @@ const file_proto_pbproduct_product_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x122\n" +
 	"\bproducts\x18\x03 \x03(\v2\x16.pbproduct.FindOneDataR\bproducts\"\\\n" +
 	"\x14DecreaseStockRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x18\n" +
-	"\aorderID\x18\x02 \x01(\x03R\aorderID\x12\x1a\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x18\n" +
+	"\aorderID\x18\x02 \x01(\tR\aorderID\x12\x1a\n" +
 	"\bquantity\x18\x03 \x01(\x03R\bquantity\"E\n" +
 	"\x15DecreaseStockResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +

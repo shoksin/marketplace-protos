@@ -23,9 +23,9 @@ const (
 
 type CreateOrderRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	ProductID     int64                  `protobuf:"varint,1,opt,name=productID,proto3" json:"productID,omitempty"`
+	ProductID     string                 `protobuf:"bytes,1,opt,name=productID,proto3" json:"productID,omitempty"`
 	Quantity      int64                  `protobuf:"varint,2,opt,name=quantity,proto3" json:"quantity,omitempty"`
-	UserID        int64                  `protobuf:"varint,3,opt,name=userID,proto3" json:"userID,omitempty"`
+	UserID        string                 `protobuf:"bytes,3,opt,name=userID,proto3" json:"userID,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -60,11 +60,11 @@ func (*CreateOrderRequest) Descriptor() ([]byte, []int) {
 	return file_proto_pborder_order_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *CreateOrderRequest) GetProductID() int64 {
+func (x *CreateOrderRequest) GetProductID() string {
 	if x != nil {
 		return x.ProductID
 	}
-	return 0
+	return ""
 }
 
 func (x *CreateOrderRequest) GetQuantity() int64 {
@@ -74,18 +74,18 @@ func (x *CreateOrderRequest) GetQuantity() int64 {
 	return 0
 }
 
-func (x *CreateOrderRequest) GetUserID() int64 {
+func (x *CreateOrderRequest) GetUserID() string {
 	if x != nil {
 		return x.UserID
 	}
-	return 0
+	return ""
 }
 
 type CreateOrderResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        int64                  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
 	Error         string                 `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	Id            int64                  `protobuf:"varint,3,opt,name=id,proto3" json:"id,omitempty"`
+	Id            string                 `protobuf:"bytes,3,opt,name=id,proto3" json:"id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -134,11 +134,11 @@ func (x *CreateOrderResponse) GetError() string {
 	return ""
 }
 
-func (x *CreateOrderResponse) GetId() int64 {
+func (x *CreateOrderResponse) GetId() string {
 	if x != nil {
 		return x.Id
 	}
-	return 0
+	return ""
 }
 
 var File_proto_pborder_order_proto protoreflect.FileDescriptor
@@ -147,13 +147,13 @@ const file_proto_pborder_order_proto_rawDesc = "" +
 	"\n" +
 	"\x19proto/pborder/order.proto\x12\apborder\"f\n" +
 	"\x12CreateOrderRequest\x12\x1c\n" +
-	"\tproductID\x18\x01 \x01(\x03R\tproductID\x12\x1a\n" +
+	"\tproductID\x18\x01 \x01(\tR\tproductID\x12\x1a\n" +
 	"\bquantity\x18\x02 \x01(\x03R\bquantity\x12\x16\n" +
-	"\x06userID\x18\x03 \x01(\x03R\x06userID\"S\n" +
+	"\x06userID\x18\x03 \x01(\tR\x06userID\"S\n" +
 	"\x13CreateOrderResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x12\x0e\n" +
-	"\x02id\x18\x03 \x01(\x03R\x02id2X\n" +
+	"\x02id\x18\x03 \x01(\tR\x02id2X\n" +
 	"\fOrderService\x12H\n" +
 	"\vCreateOrder\x12\x1b.pborder.CreateOrderRequest\x1a\x1c.pborder.CreateOrderResponseB=Z;github.com/shoksin/marketplace-protos/proto/pborder;pborderb\x06proto3"
 

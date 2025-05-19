@@ -20,7 +20,7 @@ message RegisterRequest {
 }
 
 message RegisterResponse {
-  int64 id = 1;
+  string id = 1;
   int64 status = 2;
   string error = 3;
 }
@@ -53,5 +53,5 @@ message ValidateRequest {
 message ValidateResponse {
   int64 status = 1;
   string error = 2;
-  int64 userID = 3;
+  string userID = 3;
 }
