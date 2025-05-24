@@ -368,6 +368,7 @@ func (x *LoginResponse) GetError() string {
 type ValidateRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Token         string                 `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	IsAdmin       bool                   `protobuf:"varint,2,opt,name=isAdmin,proto3" json:"isAdmin,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -407,6 +408,13 @@ func (x *ValidateRequest) GetToken() string {
 		return x.Token
 	}
 	return ""
+}
+
+func (x *ValidateRequest) GetIsAdmin() bool {
+	if x != nil {
+		return x.IsAdmin
+	}
+	return false
 }
 
 type ValidateResponse struct {
@@ -495,9 +503,10 @@ const file_proto_pbauth_auth_proto_rawDesc = "" +
 	"\rLoginResponse\x12\x14\n" +
 	"\x05token\x18\x01 \x01(\tR\x05token\x12\x16\n" +
 	"\x06status\x18\x02 \x01(\x03R\x06status\x12\x14\n" +
-	"\x05error\x18\x03 \x01(\tR\x05error\"'\n" +
+	"\x05error\x18\x03 \x01(\tR\x05error\"A\n" +
 	"\x0fValidateRequest\x12\x14\n" +
-	"\x05token\x18\x01 \x01(\tR\x05token\"X\n" +
+	"\x05token\x18\x01 \x01(\tR\x05token\x12\x18\n" +
+	"\aisAdmin\x18\x02 \x01(\bR\aisAdmin\"X\n" +
 	"\x10ValidateResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x12\x16\n" +

@@ -48,6 +48,7 @@ message LoginResponse {
 
 message ValidateRequest {
   string token = 1;
+  bool isAdmin = 2;
 }
 
 message ValidateResponse {
