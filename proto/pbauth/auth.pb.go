@@ -419,9 +419,9 @@ func (x *ValidateRequest) GetIsAdmin() bool {
 
 type ValidateResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Status        int64                  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
-	Error         string                 `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	UserID        string                 `protobuf:"bytes,3,opt,name=userID,proto3" json:"userID,omitempty"`
+	ID            string                 `protobuf:"bytes,1,opt,name=ID,proto3" json:"ID,omitempty"`
+	Status        int64                  `protobuf:"varint,2,opt,name=status,proto3" json:"status,omitempty"`
+	Error         string                 `protobuf:"bytes,3,opt,name=error,proto3" json:"error,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -456,6 +456,13 @@ func (*ValidateResponse) Descriptor() ([]byte, []int) {
 	return file_proto_pbauth_auth_proto_rawDescGZIP(), []int{7}
 }
 
+func (x *ValidateResponse) GetID() string {
+	if x != nil {
+		return x.ID
+	}
+	return ""
+}
+
 func (x *ValidateResponse) GetStatus() int64 {
 	if x != nil {
 		return x.Status
@@ -466,13 +473,6 @@ func (x *ValidateResponse) GetStatus() int64 {
 func (x *ValidateResponse) GetError() string {
 	if x != nil {
 		return x.Error
-	}
-	return ""
-}
-
-func (x *ValidateResponse) GetUserID() string {
-	if x != nil {
-		return x.UserID
 	}
 	return ""
 }
@@ -506,11 +506,11 @@ const file_proto_pbauth_auth_proto_rawDesc = "" +
 	"\x05error\x18\x03 \x01(\tR\x05error\"A\n" +
 	"\x0fValidateRequest\x12\x14\n" +
 	"\x05token\x18\x01 \x01(\tR\x05token\x12\x18\n" +
-	"\aisAdmin\x18\x02 \x01(\bR\aisAdmin\"X\n" +
-	"\x10ValidateResponse\x12\x16\n" +
-	"\x06status\x18\x01 \x01(\x03R\x06status\x12\x14\n" +
-	"\x05error\x18\x02 \x01(\tR\x05error\x12\x16\n" +
-	"\x06userID\x18\x03 \x01(\tR\x06userID2\xca\x02\n" +
+	"\aisAdmin\x18\x02 \x01(\bR\aisAdmin\"P\n" +
+	"\x10ValidateResponse\x12\x0e\n" +
+	"\x02ID\x18\x01 \x01(\tR\x02ID\x12\x16\n" +
+	"\x06status\x18\x02 \x01(\x03R\x06status\x12\x14\n" +
+	"\x05error\x18\x03 \x01(\tR\x05error2\xca\x02\n" +
 	"\vAuthService\x12=\n" +
 	"\bRegister\x12\x17.pbauth.RegisterRequest\x1a\x18.pbauth.RegisterResponse\x12G\n" +
 	"\rAdminRegister\x12\x1c.pbauth.AdminRegisterRequest\x1a\x18.pbauth.RegisterResponse\x124\n" +
